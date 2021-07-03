@@ -1,6 +1,148 @@
-#prj1 {
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Otomanopee+One&display=swap');
 
-    max-width: 20%;
+:root {
+    --vertical-space: 2rem;
+    --horizontal-space: 3rem;
+}
+
+body {
+    font-size: 18px;
+    line-height: 2;
+    display: grid;
+    grid-template-areas: "head head"
+        "nav nav"
+        "main main"
+        "foot foot";
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto auto 1fr auto;
+    font-family: 'Otomanopee One', sans-serif;
+    background-color: #a4cced;
+    background-image: url("https://www.transparenttextures.com/patterns/grey-washed-wall.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+@media screen and (min-width: 27em) {
+    body {
+        grid-template-areas: "head head"
+            "nav main"
+            "foot foot";
+        /* grid-template-columns: 1fr 4fr; */
+        grid-template-rows: auto 1fr auto;
+    }
+}
+
+body>* {
+    padding-left: var(--horizontal-space);
+    padding-right: var(--horizontal-space);
+}
+
+body>header {
+    grid-area: head;
+}
+
+body>nav {
+    grid-area: nav;
+}
+
+body>nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+body>main {
+    grid-area: main;
+}
+
+body>footer {
+    grid-area: foot;
+}
+
+header,
+footer {
+    padding-top: var(--vertical-space);
+    /* padding-bottom: var(--vertical-space); */
+}
+
+header h1,
+footer h1 {
+    margin: 0;
+}
+
+h1,
+h2{
+    line-height: 1.2;
+    font-family: 'Lobster', cursive;
+    color: #0C3A5C;
+}
+
+h3{
+    color: #3C99D6;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+a {
+    color: #2E526B;
+    text-decoration-color: #66B5EE;
+}
+
+a:hover {
+    color: white;
+}
+
+main {
+    background-color: #bbddf2;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+body#about img {
+    height: 20em;
+}
+
+
+/* body#portfolio img {
+    max-width: 50%;
     height: auto;
+} */
 
+p {
+    max-width: 50em;
+    color: #1875B8;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: inline;
+}
+
+body#portfolio ul#portfolioItems {
+    list-style-type: none;
+    padding: 0;
+}
+
+body#portfolio ul#portfolioItems li {
+    flex-basis: 48%;
+    padding-right: 2%;
+}
+
+body#portfolio ul#portfolioItems li img {
+    width: 60%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.img1 {
+    flex: calc(4032/800);
+}
+
+.img2 {
+    flex: calc(1170/800);
+}
+
+.img3 {
+    flex: 0.7505;
+}
+
+li{
+    color: #1875B8;
 }
