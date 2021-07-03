@@ -102,16 +102,12 @@ body#about img {
 }
 
 
-/* body#portfolio img {
-    max-width: 50%;
-    height: auto;
-} */
-
 p {
     max-width: 50em;
     color: #1875B8;
-    margin-top: 5px;
-    margin-bottom: 5px;
+}
+
+.resume p{
     display: inline;
 }
 
@@ -128,19 +124,6 @@ body#portfolio ul#portfolioItems li {
 body#portfolio ul#portfolioItems li img {
     width: 60%;
     height: auto;
-    vertical-align: middle;
-}
-
-.img1 {
-    flex: calc(4032/800);
-}
-
-.img2 {
-    flex: calc(1170/800);
-}
-
-.img3 {
-    flex: 0.7505;
 }
 
 li{
